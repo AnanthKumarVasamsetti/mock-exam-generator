@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block body %}
+  {% if session.logged_in %}
+      <em> Test yourself here.</em>
+      <form action="{{ url_for('quiz') }}" method=post class=add-entry>
+          <textarea name=user-text class=user-text> </textarea>
+          <input type="submit" name="submit"  id="submit-text" value="test me"> </input>
+      </form>
+  {% else %}
+      <em> Do you want to get ready for your exam? Login first! </em>
+  {% endif %}
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+{% block body %}
+  {% if session.logged_in %}
+
+    <form id="quiz" onSubmit="return quiz({{ answers | safe }});" method=post>
+        <ol id="nQuestions" value="{{ questions | length }}">
+         {% for question, p1, p2, p3, p4 in questions %}
+        <li>
+            <div class="question">
+                <p> {{ question }} </p>
+                <div class="container">
+                    <radiogroup>
+                        <div>
+                            <input class="questions choice-pick-{{loop.index}}" type="radio" name="q-{{ loop.index }}" value="{{ p1 }}">
+                            <label for="c1"> <span><span></span></span> {{ p1 }} </label>
+                        </div>
+                        <div>
+                            <input class="questions choice-pick-{{loop.index}}" type="radio" name="q-{{ loop.index }}" value="{{ p2 }}">
+                            <label for="c2"> <span><span></span></span> {{ p2 }} </label>
+                        </div>
+                        <div>
+                            <input class="questions choice-pick-{{loop.index}}" type="radio" name="q-{{ loop.index }}" value="{{ p3 }}">
+                            <label for="c3"> <span><span></span></span> {{ p3 }} </label>
+                        </div>
+                        <div>
+                            <input class="questions choice-pick-{{loop.index}}" type="radio" name="q-{{ loop.index }}" value="{{ p4 }}">
+                            <label for="c4"> <span><span></span></span> {{ p4 }} </label>
+                        </div>
+                    </radiogroup>
+                </div>
+            </div>
+        </li>
+         {% endfor %}
+     </ol>
+    <input type="submit" name="submit" id="submit-quiz" value="submit"> </input>
+    </form>
+  {% endif %}
+{% endblock %}

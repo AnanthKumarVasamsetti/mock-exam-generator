@@ -1,0 +1,152 @@
+body {
+    font-family: sans-serif;
+    background: #eee;
+}
+a:link, a:visited, a:hover {
+    text-decoration: none;
+    color: #EEE;
+    font-size: 1.5em;
+}
+.page {
+    margin: 7em auto;
+    width: 60em;
+    border: 2px solid #15526E;
+    padding: 0.8em;
+    background: #F7FAFF;
+    min-height: 30em;
+}
+@font-face {
+    font-family: "Custom Font 1";
+    src: url('LoveYaLikeASister.ttf') format("truetype");
+}
+.nav-header {
+    font-family: "Custom Font 1";
+    color: #FF0;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    border-top: 0;
+    height: 5em;
+    background: #034f84; /* another cool BLUE: #0B52E8; */
+}
+.nav-title-text {
+    text-align: center;
+    margin-top: 10px;
+    color: #EEE;
+}
+.metanav {
+    position: fixed;
+    right: 29em;
+    top: 1.3em;
+    color: #EEE;
+}
+.add-entry {
+    font-size: 0.9em;
+    border-bottom: 1px solid #ccc;
+}
+.add-entry dl {
+    font-weight: bold;
+}
+.flash {
+    background: #cee5F5;
+    padding: 0.5em;
+    border: 1px solid #aacbe2;
+}
+.error {
+    background: #f0d6d6;
+    padding: 0.5em;
+}
+textarea {
+    display: block;
+    margin: 10px auto;
+    min-height: 200px;
+    width: 80%;
+    max-width: 100%;
+}
+
+/* Style created by Stephen Morley
+ * LINK: http://code.stephenmorley.org/html-and-css/styling-checkboxes-and-radio-buttons/#pureCSS
+ */
+input[type=radio]:not(old){
+    width: 2em;
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    opacity: 0;
+}
+input[type=radio]:not(old) + label{
+    display: inline-block;
+    margin-left: -2em;
+    line-height: 1.5em;
+}
+input[type=radio   ]:not(old) + label > span{
+  display          : inline-block;
+  width            : 0.875em;
+  height           : 0.875em;
+  margin           : 0.25em 0.5em 0.25em 0.25em;
+  border           : 0.0625em solid rgb(192,192,192);
+  border-radius    : 0.25em;
+  background       : rgb(224,224,224);
+  background-image :    -moz-linear-gradient(rgb(240,240,240),rgb(224,224,224));
+  background-image :     -ms-linear-gradient(rgb(240,240,240),rgb(224,224,224));
+  background-image :      -o-linear-gradient(rgb(240,240,240),rgb(224,224,224));
+  background-image : -webkit-linear-gradient(rgb(240,240,240),rgb(224,224,224));
+  background-image :         linear-gradient(rgb(240,240,240),rgb(224,224,224));
+  vertical-align   : bottom;
+}
+input[type=radio   ]:not(old):checked + label > span{
+  background-image :    -moz-linear-gradient(rgb(224,224,224),rgb(240,240,240));
+  background-image :     -ms-linear-gradient(rgb(224,224,224),rgb(240,240,240));
+  background-image :      -o-linear-gradient(rgb(224,224,224),rgb(240,240,240));
+  background-image : -webkit-linear-gradient(rgb(224,224,224),rgb(240,240,240));
+  background-image :         linear-gradient(rgb(224,224,224),rgb(240,240,240));
+}
+
+input[type=radio]:not(old):checked + label > span:before{
+  content     : '\2713'; /* tick */
+  display     : block;
+  width       : 1em;
+  color       : rgb(153,204,102);
+  font-size   : 0.875em;
+  line-height : 1em;
+  text-align  : center;
+  text-shadow : 0 0 0.0714em rgb(115,153,77);
+  font-weight : bold;
+}
+/*input[type=radio]:not(old):checked + label > span > span{
+  display          : block;
+  width            : 0.5em;
+  height           : 0.5em;
+  margin           : 0.125em;
+  border           : 0.0625em solid rgb(115,153,77);
+  border-radius    : 0.125em;
+  background       : rgb(153,204,102);
+  background-image :    -moz-linear-gradient(rgb(179,217,140),rgb(153,204,102));
+  background-image :     -ms-linear-gradient(rgb(179,217,140),rgb(153,204,102));
+  background-image :      -o-linear-gradient(rgb(179,217,140),rgb(153,204,102));
+  background-image : -webkit-linear-gradient(rgb(179,217,140),rgb(153,204,102));
+  background-image :         linear-gradient(rgb(179,217,140),rgb(153,204,102));
+}*/
+
+/****************************************/
+
+#submit-quiz, #submit-text {
+    display: block;
+    margin: 0 auto;
+    color: #EEE;
+    font-family: "Custom Font 1";
+    background-color: #034f84;
+}
+.ans-right {
+    visibility: hidden;
+    color: green;
+}
+.ans-wrong {
+    visibility: hidden;
+    color: red;
+}
+.time {
+    color: grey;
+}
